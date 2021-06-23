@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDE</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+
+            color: #000000;
+
+            font-weight: bold;
+            font-size: 60px;
+
+            padding-left: 550px;
+
+            cursor: pointer;
+
+            opacity: 0;
+            transform: translateX(-100%);
+
+            transition: all .5s;
+
+            animation: fadeInMenu 1s;
+            animation-fill-mode: forwards;
+
+        }
+
+        h2:hover{
+            color: #ffffff;
+        }
+
+        body h2:first-child{
+            padding-top: 240px;
+        }
+
+        body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 80px;
+
+            width: 100%;
+            height: 100vh;
+
+            background: #ffffff;
+
+            overflow: hidden;
+
+            background-image: url('background.png')
+
+        }
+
+        @keyframes fadeInMenu{
+            from{
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to{
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 onclick="redirect('projetos')">Projetos</h2>
+    
+    <script>
+
+        function redirect(page){
+            window.location.href = `./projetos.html`
+        }
+
+    </script>
+</body>
+</html>
